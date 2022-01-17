@@ -12,11 +12,21 @@ jobs:
       - name: Install 🔧
         run: npm install
 
+
       - name: start
         run: npm start
+
+
+      - name: test
+        run: npm test
 
 
       - name: Build 🏗️
         run: npm run build
 
+
+      - name: eject
+        run: npm run eject
+
+     
     
