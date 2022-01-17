@@ -1,9 +1,9 @@
 // import './App.css';
 import {useState, useEffect} from "react";
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
