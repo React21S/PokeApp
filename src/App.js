@@ -1,4 +1,3 @@
-// import './App.css';
 import {useState, useEffect} from "react";
 import axios from 'axios';
 // import Button from 'react-bootstrap/Button';
@@ -12,16 +11,17 @@ import Card from 'react-bootstrap/Card';
 
 function App() {
   const [pokemons, setPokemons]=useState([]);
+  
 
   useEffect(()=>{
     axios.get("https://pokeapi.co/api/v2/pokemon/").then((response) =>{
       const fetches = response.data.results.map((p)=>axios.get(p.url).then((response)=>response.data));
       
-     Promise.all(fetches).then((data)=>{setPokemons(data)}); 
+     Promise.all(fetches).then((data)=>{setPokemons(data);
+      }); 
     });
   },[]);
   console.log(pokemons)
-
 
   return (
     <div>
@@ -33,24 +33,18 @@ function App() {
 
 <Container>
   <Row xs={2} md={4} lg={5} className="justify-content-between my-5 d-flex gap-3">
-    {pokemons.map((p)=>(
-    <div key={p.name}><li>{p.name}</li>
-    {/* <img src={pokemons.sprites.other.dream_world.front_default}/> */}
-    </div>
-    ))}
-
-  <Card bg="dark" text="light" style={{ width: '15rem' }}>
-        <Card.Img variant="top" src="https://www.worldatlas.com/r/w960-q80/upload/ea/3f/a4/shutterstock-497360188.jpg" />
+  {pokemons.map((pokemon) => (
+  <Card bg="secondary" text="dark" key={pokemon.name} style={{ width: '15rem' }}>
         <Card.Body>
-            <Card.Title>My poke card </Card.Title>
-            <Card.Text>
-             Text is going to be here
-            </Card.Text>
+            <Card.Title>{pokemon.name}</Card.Title>
+            <Card.Img variant="top" src={pokemon.sprites.other.dream_world.front_default} />
         </Card.Body>
       </Card>
+       ))}
   </Row>
 </Container>
 
+<Card.Footer  className="text-center">Femi Adesola &copy; {new Date().getFullYear()}</Card.Footer>
 
     </div>
 );

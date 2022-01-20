@@ -15,14 +15,14 @@ jobs:
       - name: start
         run: npm start
 
-      - name: Build 🏗️
-        run: npm run build
+      # - name: Build 🏗️
+      #   run: npm run build
 
-      - name: test
-        run: npm test
+      # - name: test
+      #   run: npm test
 
-      - name: eject
-        run: npm run eject
+      # - name: eject
+      #   run: npm run eject
 
      
     
