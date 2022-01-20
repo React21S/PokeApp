@@ -1,6 +1,8 @@
 name: PokeApp
 
-on: push
+on: 
+  push:
+    branches:[main]
 
 jobs:
   build:
@@ -12,14 +14,12 @@ jobs:
       - name: Install 🔧
         run: npm install
         
-      - name: start
-        run: npm start
 
-      # - name: Build 🏗️
-      #   run: npm run build
+      - name: Build 🏗️
+        run: npm run build --if-present
 
-      # - name: test
-      #   run: npm test
+      - name: test
+        run: npm test
 
       # - name: eject
       #   run: npm run eject
