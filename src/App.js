@@ -19,8 +19,8 @@ function App() {
     <Routes>
       <Route>
         <Route path="/" element={<Layout/>}>
-        <Route path="/home" element={<Home/>} />
-        <Route path="/pokelist" element={<PokeList/>} />
+        <Route index element={<Home/>} />
+        <Route path="pokelist" element={<PokeList/>} />
       </Route>
     </Route>
   </Routes>
