@@ -3,12 +3,14 @@
 # Pokemon App
 
 ![Home](/img/Home.png)
--   Pokemon App build with react hooks and react bootstrap 
+-   Pokemon App build with [react hooks](https://reactjs.org/docs/hooks-intro.html) and [react bootstrap](https://react-bootstrap.netlify.app/getting-started/introduction)
 
 ---
 ![Pokemons](/img/Pokemons.png) 
 
-
+## small screen 
+![mid](/img/Mid.png) 
+![mid](/img/Mid2.png) 
 
 ![LoadMore](/img/LoadMore.png) 
 

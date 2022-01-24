@@ -14,9 +14,9 @@ import Container from 'react-bootstrap/Container';
 function PokeList() {
   const [pokemon, setPokemon]=useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [nextPokemons, setNextPokemons] = useState("//pokeapi.co/api/v2/pokemon?limit=8&offset=0");
+  const [nextPokemons, setNextPokemons] = useState("//pokeapi.co/api/v2/pokemon?limit=20&offset=0");
 
-//   const [previousPokemons, setPreviousPokemons] = useState()
+//   const [previousPokemons, setPreviousPokemons] = useState("//pokeapi.co/api/v2/pokemon?limit=20&offset=0")
   
 
   useEffect(()=>{

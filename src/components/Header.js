@@ -4,9 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
 
+
 const Header = () => {
-    return (<>
-      <Navbar bg="dark" variant="dark" className="pokeApp">
+    return (
+      <Navbar bg="dark" variant="dark" expand="md" className="pokeApp">
           <Container>
             {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,10 +25,7 @@ const Header = () => {
       </Navbar.Collapse>
   </Container>
          
-      </Navbar>
-
-
-   </>   
+      </Navbar> 
     );
 };
 

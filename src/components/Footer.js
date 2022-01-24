@@ -2,12 +2,13 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 
 
+
 const Footer = () => {
     return (
-       
-        <div className="footerWrapper">
-             <footer>
-            <div className="icons">
+        <Card bg="danger"  variant="light" className="text-center">
+        <Card.Footer >
+
+        <div className="icons">
                 <a href="https://www.linkedin.com/in/femi-adesola-oyinloye-106454145/" target="_blank" rel="noreferrer" className="linkedin">
                         <i className="fab fa-linkedin fa-2x"></i>
                     </a>
@@ -22,14 +23,10 @@ const Footer = () => {
                 </div>
                
                 <p>Femi Adesola &copy; {new Date().getFullYear()}</p>
-               
-                 {/* <Card.Footer className="text-center">Femi Adesola &copy; {new Date().getFullYear()}</Card.Footer>     */}
-        </footer>
-    </div>
-       
-           
+            
+        </Card.Footer>  
 
-           
+        </Card>   
       
     );
 };
