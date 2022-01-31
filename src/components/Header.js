@@ -19,7 +19,11 @@ const Header = () => {
             <Nav.Link >Home</Nav.Link></LinkContainer >
 
             <LinkContainer to ="pokelist">
-            <Nav.Link >Pokemons</Nav.Link></LinkContainer>
+            <Nav.Link >Pokelist</Nav.Link></LinkContainer>
+            <LinkContainer to ="favorites">
+            <Nav.Link >Favorites</Nav.Link></LinkContainer>
+            <LinkContainer to ="">
+            <Nav.Link >PokeApp</Nav.Link></LinkContainer>
           
           </Nav>
       </Navbar.Collapse>

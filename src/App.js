@@ -8,6 +8,7 @@ import {
 import PokeList from "./components/PokeList";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
+import PokeSingle from "./components/PokeSingle";
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>} />
         <Route path="pokelist" element={<PokeList/>} />
+        <Route path=":pokemonName" element={<PokeSingle/>} />
       </Route>
     </Route>
   </Routes>

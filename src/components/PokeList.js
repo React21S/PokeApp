@@ -12,7 +12,7 @@ import Container from 'react-bootstrap/Container';
 
 
 function PokeList() {
-  const [pokemon, setPokemon]=useState([]);
+  const [pokemons, setPokemons]=useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [nextPokemons, setNextPokemons] = useState("//pokeapi.co/api/v2/pokemon?limit=20&offset=0");
 
@@ -35,11 +35,11 @@ function PokeList() {
         setNextPokemons(response.data.next);
 
        Promise.all(fetches).then((data)=>{
-          setPokemon((prevState)=>[...prevState, ...data]);
+          setPokemons((prevState)=>[...prevState, ...data]);
           
         }); 
         setIsLoading(false);
-        console.log(pokemon);
+        console.log(pokemons);
     });
   };
 
@@ -50,11 +50,12 @@ function PokeList() {
     {isLoading && <Loading/>}
     {
         !isLoading &&
-    pokemon.map((pokemon) => (
+    pokemons.map((pokemon) => (
     <PokeCard
     key={pokemon.name}
     name={pokemon.name}
     image={pokemon.sprites.other.dream_world.front_default}
+    pokemonName={pokemon.name}
     />      
     ))}
     </Row>
