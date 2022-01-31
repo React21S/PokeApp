@@ -7,7 +7,7 @@ const FavoriteList = ({favHandler, favorites}) => {
     return (
         <div>
            <Container>
-                <Row xs={2} md={4} lg={5} className="justify-content-between my-5 d-flex gap-3">
+                <Row xs={2} md={4} lg={5} className="justify-content-between my-5 d-flex gap-3 m-5">
                     {favorites.map((pokemon) => (
                         <PokeCard
                         key={pokemon.name}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import {useState, useEffect} from "react";
 import Loading from './Loading';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 const PokeSingle = () => {
@@ -27,26 +28,28 @@ const PokeSingle = () => {
 
     
     return (
-        <div>
+        <div className="pokeSinglePage">
+        <Card className="pokeSingleCard">
             {isLoading && <Loading/>}
-            {!isLoading && (
-                <div>
-                    <p>This is {pokemon.name} Pokemon</p>
-                    <h2>{pokemon.name}</h2>
+            {!isLoading && (<div>
+               
+                <Card.Header bg="primary" className="d-flex justify-content-center" >{pokemon.name}</Card.Header>
                     <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon}/>
-                    <h2>This is {pokemon.name} Pokemon</h2>
-                    <h2>Weight: {pokemon.weight} kg</h2>
-                    <h3>Height: {pokemon.height}0 cm</h3>
-                    <h3>Experience: {pokemon.base_experience}</h3>
+                   <div className="pokeSingle">
+                    <p>This is <span>{pokemon.name}</span> Pokemon </p>
+                    <p>Weight: {pokemon.weight} kg</p>
+                    <p>Height: {pokemon.height}0 cm</p>
                     <p>Experience: {pokemon.base_experience}</p>
-                    <h3>Types:{" "} 
+                    <p>Types:{" "} 
                     <ul>
                     {pokemon.types.map((item)=>(<li key={item.type.name}>{item.type.name}</li>))}
                     </ul>
-                    </h3>
+                    </p>
+                    </div>
                 </div>
             )}
-            <Button onClick={()=>navigate(-1)}>Back to list</Button>
+            <Button variant='secondary' onClick={()=>navigate(-1)}>Back to list</Button>
+        </Card>
         </div>
     );
 };
