@@ -16,8 +16,15 @@ const PokeCard = ({image, name, pokemonName, type, fav, favClick}) => {
                 
                 </Card.Header>
                 <Card.Img variant="top" src={image} />
-                <LinkContainer to={`/${pokemonName}`}><Button className="my-3" variant="outline-light" size="sm">Details</Button></LinkContainer>
+                
             </Card.Body>
+            <Card.Footer className="d-grid">
+                <LinkContainer to={`/${pokemonName}`}>
+                    <Button className="my-3" variant="outline-light" size="sm">
+                        Details
+                    </Button>
+                </LinkContainer>
+      </Card.Footer>
         </Card>
        
     );

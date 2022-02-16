@@ -49,9 +49,9 @@ function App() {
       <Route>
         <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>} />
-        <Route path="pokelist" element={<PokeList favHandler={favHandler}/>} />
+        <Route path="pokelist" element={<PokeList favHandler={favHandler} favorites={favorites}/>} />
         <Route path=":pokemonName" element={<PokeSingle/>} />
-        <Route path="favorites" element={<FavoriteList favHandler={favHandler} favorites={favorites}/>} />
+        <Route path="favorites" element={<FavoriteList favHandler={favHandler} favorites={favorites} removeFav={setFavorites}/>} />
       </Route>
     </Route>
   </Routes>

@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/Container';
 
 
 
-function PokeList({favHandler}) {
+function PokeList({favHandler, favorites}) {
   const [pokemons, setPokemons]=useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [nextPokemons, setNextPokemons] = useState("//pokeapi.co/api/v2/pokemon?limit=20&offset=0");
@@ -52,6 +52,8 @@ function PokeList({favHandler}) {
           image={pokemon.sprites.other.dream_world.front_default}
           pokemonName={pokemon.name}
           favClick={()=>favHandler(pokemon)}
+          fav={favorites.some((item) => item.name === pokemon.name)}
+          type={pokemon.types[0].type.name}
           />      
         ))}
         </Row>

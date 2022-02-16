@@ -37,12 +37,20 @@ const PokeSingle = () => {
                     <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon}/>
                    <div className="pokeSingle">
                     <p>This is <span>{pokemon.name}</span> Pokemon </p>
-                    <p>Weight: {pokemon.weight} kg</p>
-                    <p>Height: {pokemon.height}0 cm</p>
+                    <p>Weight: {pokemon.weight/10} kg</p>
+                    <p>Height: {pokemon.height*10} cm</p>
                     <p>Experience: {pokemon.base_experience}</p>
-                    <p>Types:{" "} 
+                    <p><span>Types:{" "} </span>
                     <ul>
                     {pokemon.types.map((item)=>(<li key={item.type.name}>{item.type.name}</li>))}
+                    </ul>
+                    </p>
+                    <p>
+                    <span> Abilities:{" "} </span>
+                    <ul>
+                        {pokemon.abilities.map((item) => (
+                        <li key={item.ability.name}>{item.ability.name}</li>
+                        ))}
                     </ul>
                     </p>
                     </div>

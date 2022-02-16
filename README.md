@@ -8,6 +8,19 @@
 ---
 ![Pokemons](/img/Pokemons.png) 
 
+---
+Favorites selection
+![FavPokemons](/img/Pokemons_fav.png) 
+
+---
+
+Details about single Pokemon
+
+![SinglePokemons](/img/Details.png) 
+
+---
+
+
 ## small screen 
 ![mid](/img/Mid.png) 
 ![mid](/img/Mid2.png) 
